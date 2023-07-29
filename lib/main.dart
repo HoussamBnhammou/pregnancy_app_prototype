@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  final String imageUrl = './y_and_b.jpg';
+  final String imageUrl = '../y_and_b.jpg';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
