@@ -19,10 +19,7 @@ class MyApp extends StatelessWidget{
       
       title: 'Date Input Widget',
       home: Scaffold(
-        appBar: PreferredSize (
-        preferredSize: navbar.preferredSize,
-        child: navbar
-        ),
+     
         body: Center(
           child:  WaterIntakeGauge(
   value: 0.7, // Replace this with the actual progress value (between 0.0 and 1.0)
