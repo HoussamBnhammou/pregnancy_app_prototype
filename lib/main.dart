@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:pregnancy_app_prototype/screens/lunch_page_date_input.dart';
+import 'package:pregnancy_app_prototype/screens/symptoms_page.dart';
 import 'widgets/dateInputWidgets/dateInputWidget.dart';
 import 'widgets/profileButtonWidgets/profileButtonWidgets.dart';
-import 'widgets/nav_bar/nav_bar.dart';
-import 'widgets/charts/liquid_fill_gauge.dart';
+import 'screens/settings_page.dart';
+import 'screens/profile_page.dart';
 
 void main(n) {
   runApp(MyApp());
@@ -10,24 +12,15 @@ void main(n) {
 
 class MyApp extends StatelessWidget{
   final String imageUrl = '../y_and_b.jpg';
+
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    var navbar = NavigationBarWidget(pageTitle:'hhh',
-        onBackButtonPressed:()=>{true},
-        onProfileButtonPressed:()=>{true} );
+    
     return MaterialApp(
       
       title: 'Date Input Widget',
-      home: Scaffold(
-     
-        body: Center(
-          child:  WaterIntakeGauge(
-  value: 0.7, // Replace this with the actual progress value (between 0.0 and 1.0)
-  height: 200, // Customize the height of the gauge
- // Customize the water color
-),
-        ),
-      ),
+      home: LunchPageDateInput(),
     );  
   }
 }

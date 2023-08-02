@@ -4,7 +4,7 @@ class ProfileCircleWidget extends StatelessWidget {
   final String imageUrl;
   final Function() onPressed;
 
-  ProfileCircleWidget({required this.imageUrl, required this.onPressed});
+  const ProfileCircleWidget({super.key, required this.imageUrl, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

@@ -1,26 +1,28 @@
+// was modified
+
 import 'package:flutter/material.dart';
 
 class CounterWidget extends StatelessWidget {
   // parameters
-  final int contractions;
-  final int kicks;
+  final String displayTitle;
+  final int displayValue;
 
   // constructure
   const CounterWidget(
-      {super.key, required this.contractions, required this.kicks});
+      {super.key, required this.displayTitle, required this.displayValue});
 
   // DON'T TOUCH THIS
   @override
   Widget build(BuildContext context) {
-    return _buildBody();
+    return Container(
+      color: Colors.grey,
+      child: _buildBody(),
+    );
   }
 
   // Main Code
   Widget _buildBody() => Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Text('contractions : $contractions'),
-          Text(' kicks : $kicks')
-        ],
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [Text('$displayTitle : '), Text('$displayValue')],
       );
 }

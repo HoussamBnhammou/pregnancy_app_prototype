@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pregnancy_app_prototype/screens/profile_page.dart';
 import '../profileButtonWidgets/profileButtonWidgets.dart';
 
 class NavigationBarWidget extends StatelessWidget {
@@ -11,14 +12,16 @@ class NavigationBarWidget extends StatelessWidget {
     required this.onBackButtonPressed,
     required this.onProfileButtonPressed,
   });
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => Size.fromHeight(56);
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.blue, // Set the desired app bar background color
       leading: IconButton(
         icon: Icon(Icons.arrow_back),
-        onPressed: onBackButtonPressed,
+        onPressed:() {
+            Navigator.pop(context);
+            } ,
         color: Colors.white, // Set the desired back button icon color
       ),
       title: Text(
@@ -32,7 +35,7 @@ class NavigationBarWidget extends StatelessWidget {
       actions: [
         ProfileCircleWidget(
           imageUrl: '',
-          onPressed: ()=>{true}),
+          onPressed: ()=>{Navigator.push(context, MaterialPageRoute(builder: (context)=> const Profile()))}),  
       ],
     );
   }
