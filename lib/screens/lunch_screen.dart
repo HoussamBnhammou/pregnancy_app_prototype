@@ -1,7 +1,9 @@
 
 
 
-import '../widgets/nav_bar/nav_bar.dart';
+import 'package:pregnancy_app_prototype/screens/lunch_page_date_input.dart';
+
+import '../widgets/nav_bar.dart';
 import 'package:flutter/material.dart';
 
 class LunchScreen extends StatelessWidget {
@@ -33,17 +35,18 @@ class LunchScreen extends StatelessWidget {
                Column(
         
                   children: [
-                      TextButton(onPressed: ()=> Null, child: Text('conception date')),
-                      TextButton(onPressed: ()=> Null, child: Text('last time u had sex')),
-                      TextButton(onPressed: ()=> Null, child: Text('last periode'))
+                      TextButton(onPressed: ()=> {Navigator.push(context, MaterialPageRoute(builder: (context)=>LunchPageDateInput(question:1)) )}, child: Text('conception date')),
+                      TextButton(onPressed: ()=> {Navigator.push(context, MaterialPageRoute(builder: (context)=>LunchPageDateInput(question: 1)) )}, child: Text('last time u had sex')),
+                      TextButton(onPressed:()=> {Navigator.push(context, MaterialPageRoute(builder: (context)=>LunchPageDateInput(question: 3)) )}, child: Text('last periode'))
                 ]),
               
+
             ],)
           ),
         ),
     );
     // TODO: implement build
-    throw UnimplementedError();
+
   }
   
   @override

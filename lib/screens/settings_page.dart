@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pregnancy_app_prototype/screens/profile_page.dart';
 
-import 'package:pregnancy_app_prototype/widgets/nav_bar/nav_bar.dart';
+import 'package:pregnancy_app_prototype/widgets/nav_bar.dart';
 
 class SettingsPage extends StatelessWidget{
   const SettingsPage({super.key});
@@ -52,8 +52,7 @@ class SettingsPage extends StatelessWidget{
         rowButtons,
       ]),
     );
-    // TODO: implement build
-    throw UnimplementedError();
+
   }
   
   @override

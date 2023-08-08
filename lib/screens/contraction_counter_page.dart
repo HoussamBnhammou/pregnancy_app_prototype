@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/counter_widget/counter_widget.dart';
+import '../widgets/counter_widget.dart';
 import './kick_counter_page.dart';
 import '../../../main.dart';
 
@@ -17,7 +17,7 @@ class ContractionPage extends StatelessWidget {
     }
 
     void takeMeHome() {
-      Widget home = MyApp();
+      Widget home = const MyApp();
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => (home)));
     }

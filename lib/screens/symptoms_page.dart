@@ -6,9 +6,9 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:pregnancy_app_prototype/widgets/nav_bar/nav_bar.dart';
+import 'package:pregnancy_app_prototype/widgets/nav_bar.dart';
 
-import '../widgets/symptom_tag_widget/symptoms_tags_widget.dart';
+import '../widgets/symptoms_tags_widget.dart';
 
 class SymptomPage extends StatelessWidget{
   const SymptomPage({super.key});
@@ -44,8 +44,7 @@ class SymptomPage extends StatelessWidget{
         
       );
   
-    // TODO: implement build
-    throw UnimplementedError();
+  
   }
 
   

@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pregnancy_app_prototype/screens/settings_page.dart';
-import 'package:pregnancy_app_prototype/widgets/nav_bar/nav_bar.dart';
+import 'package:pregnancy_app_prototype/widgets/nav_bar.dart';
 
 class Profile extends StatelessWidget{
   const Profile({super.key});
@@ -57,7 +57,7 @@ class Profile extends StatelessWidget{
         ),
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: NetworkImage(""),
+          image: NetworkImage('./y_and_b.jpg'),
         ),
       ),
     );
@@ -87,7 +87,7 @@ class Profile extends StatelessWidget{
 
 
     // TODO: implement build
-    throw UnimplementedError();
+  
   }
 
 
