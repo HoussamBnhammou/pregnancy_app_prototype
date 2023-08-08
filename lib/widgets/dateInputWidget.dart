@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
 class DateInputWidget extends StatefulWidget {
+    final Function(DateTime) onSelectedDate;
+    DateInputWidget({required this.onSelectedDate});
   @override
   _DateInputWidgetState createState() => _DateInputWidgetState();
 }
 
 class _DateInputWidgetState extends State<DateInputWidget> {
-  DateTime selectedDate = DateTime.now(); // Initial date set to today.
+  DateTime selectedDate = DateTime.now(); 
+
 
   Future<void> _selectDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
@@ -21,6 +24,8 @@ class _DateInputWidgetState extends State<DateInputWidget> {
         selectedDate = picked;
       });
     }
+
+    widget.onSelectedDate(selectedDate);
   }
 
   @override

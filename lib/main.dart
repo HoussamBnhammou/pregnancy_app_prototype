@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:pregnancy_app_prototype/screens/home_page.dart';
 import 'package:pregnancy_app_prototype/screens/lunch_page_date_input.dart';
-import 'package:pregnancy_app_prototype/screens/symptoms_page.dart';
-import 'widgets/dateInputWidgets/dateInputWidget.dart';
-import 'widgets/profileButtonWidgets/profileButtonWidgets.dart';
-import 'screens/settings_page.dart';
-import 'screens/profile_page.dart';
 
-void main(n) {
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import 'models/baby.dart';
+import 'models/women.dart';
+
+
+
+
+Future<void> main() async {
+
+  
   runApp(MyApp());
 }
 
@@ -20,7 +27,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       
       title: 'Date Input Widget',
-      home: LunchPageDateInput(),
+      home: Home( mother: Mother(conceptionDate: DateTime(2023, 1, 1)  , babies: [ Baby(conceptionDate: DateTime(2023, 1, 1))]),),
     );  
   }
 }
