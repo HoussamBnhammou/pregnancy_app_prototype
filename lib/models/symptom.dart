@@ -1,23 +1,26 @@
-class Symptoms {
-  Map<String, List<String>> symptomsByCategory;
-  double hydrationLevel;
+import './symptom_type.dart';
+import './hydration.dart';
+
+class Symptom {
+  Symptoms symptomsByCategory;
+  Hydration hydrationLevel;
   String note;
   DateTime date;
 
-  Symptoms({
+  Symptom({
     required this.symptomsByCategory,
     required this.hydrationLevel,
     required this.note,
     required this.date,
   });
 
-  // Getters  
+  // Getters
 
-  Map<String, List<String>> getSymptomsByCategory() {
+  Symptoms getSymptomsByCategory() {
     return symptomsByCategory;
   }
 
-  double getHydrationLevel() {
+  Hydration getHydrationLevel() {
     return hydrationLevel;
   }
 
@@ -31,11 +34,11 @@ class Symptoms {
 
   // Setters
 
-  void setSymptomsByCategory(Map<String, List<String>> newSymptomsByCategory) {
+  void setSymptomsByCategory(Symptoms newSymptomsByCategory) {
     symptomsByCategory = newSymptomsByCategory;
   }
 
-  void setHydrationLevel(double newHydrationLevel) {
+  void setHydrationLevel(Hydration newHydrationLevel) {
     hydrationLevel = newHydrationLevel;
   }
 

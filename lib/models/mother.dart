@@ -1,28 +1,28 @@
 import 'baby.dart';
 import 'baby_kicks.dart';
 import 'contractions.dart';
-import 'symptoms.dart';
-
+import 'symptom.dart';
 
 class Mother {
   int age;
   DateTime conceptionDate;
-  List<Symptoms> symptoms;
+  List<Symptom> symptoms;
   String pregnancyTypes;
   List<Contraction> contractions;
   List<BabyKicks> babyKicks;
   List<Baby> babies;
 
-Mother({ this.age =0,
-        required this.conceptionDate,
-        required this.babies,
-        this.symptoms = const [],
-        this.babyKicks =const [],
-        this.contractions =const [],
-        this.pregnancyTypes= 'normal',
-});
+  Mother({
+    this.age = 0,
+    required this.conceptionDate,
+    required this.babies,
+    this.symptoms = const [],
+    this.babyKicks = const [],
+    this.contractions = const [],
+    this.pregnancyTypes = 'normal',
+  });
 
- // Getters
+  // Getters
 
   int getAge() {
     return age;
@@ -32,7 +32,7 @@ Mother({ this.age =0,
     return conceptionDate;
   }
 
-  List<Symptoms> getSymptoms() {
+  List<Symptom> getSymptom() {
     return symptoms;
   }
 
@@ -62,8 +62,8 @@ Mother({ this.age =0,
     conceptionDate = newConceptionDate;
   }
 
-  void setSymptoms(List<Symptoms> newSymptoms) {
-    symptoms = newSymptoms;
+  void setSymptoms(List<Symptom> newSymptom) {
+    symptoms = newSymptom;
   }
 
   void setPregnancyTypes(String newPregnancyType) {
@@ -81,8 +81,4 @@ Mother({ this.age =0,
   void setBabies(List<Baby> newBabies) {
     babies = newBabies;
   }
-
-
-
-
 }

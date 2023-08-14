@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 
 class DateInputWidget extends StatefulWidget {
-    final Function(DateTime) onSelectedDate;
-    DateInputWidget({required this.onSelectedDate});
+  final Function(DateTime) onSelectedDate;
+  DateInputWidget({required this.onSelectedDate});
   @override
-  _DateInputWidgetState createState() => _DateInputWidgetState();
+  State<DateInputWidget> createState() => _DateInputWidgetState();
 }
 
 class _DateInputWidgetState extends State<DateInputWidget> {
-  DateTime selectedDate = DateTime.now(); 
-
+  DateTime selectedDate = DateTime.now();
 
   Future<void> _selectDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
@@ -33,7 +32,7 @@ class _DateInputWidgetState extends State<DateInputWidget> {
     return GestureDetector(
       onTap: () => _selectDate(context),
       child: Container(
-        padding: EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(12.0),
         decoration: BoxDecoration(
           border: Border.all(color: Colors.grey),
           borderRadius: BorderRadius.circular(8.0),
@@ -42,10 +41,11 @@ class _DateInputWidgetState extends State<DateInputWidget> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              "${selectedDate.toLocal()}".split(' ')[0], // Display only the date part.
-              style: TextStyle(fontSize: 18.0),
+              "${selectedDate.toLocal()}"
+                  .split(' ')[0], // Display only the date part.
+              style: const TextStyle(fontSize: 18.0),
             ),
-            Icon(Icons.calendar_today),
+            const Icon(Icons.calendar_today),
           ],
         ),
       ),

@@ -6,9 +6,9 @@ class Baby {
 
   Baby({
     required this.conceptionDate,
-    this.ageInDays=0,
-     this.sex= 'male',
-     this.name= 'Baby',
+    this.ageInDays = 0,
+    this.sex = 'male',
+    this.name = 'Baby',
   });
 
   // Getters
