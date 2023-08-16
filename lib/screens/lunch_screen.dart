@@ -9,12 +9,7 @@ class LunchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-          preferredSize: preferredSize,
-          child: NavigationBarWidget(
-              pageTitle: 'dfsnl',
-              onBackButtonPressed: () => null,
-              onProfileButtonPressed: () => null)),
+      
       body: Center(
         child: Container(
             padding: const EdgeInsets.all(2),

@@ -16,6 +16,10 @@ class _DateInputWidgetState extends State<DateInputWidget> {
       initialDate: selectedDate,
       firstDate: DateTime(2000),
       lastDate: DateTime(2101),
+      selectableDayPredicate: (DateTime date) {
+        // Make future dates unselectable
+        return date.isBefore(DateTime.now());
+      },
     );
 
     if (picked != null && picked != selectedDate) {
@@ -52,3 +56,5 @@ class _DateInputWidgetState extends State<DateInputWidget> {
     );
   }
 }
+
+

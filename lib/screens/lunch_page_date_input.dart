@@ -22,6 +22,7 @@ class _LunchPageDateInputState extends State<LunchPageDateInput> {
 
   void calculateAgeInDays() {
     ageInDays = DateTime.now().difference(conceptionDate).inDays;
+   
   }
 
   void calculateConceptionDate(DateTime date) {
@@ -31,19 +32,16 @@ class _LunchPageDateInputState extends State<LunchPageDateInput> {
       if (widget.question == 3) {
         conceptionDate = selectedDate.add(const Duration(days: 16));
         calculateAgeInDays();
-        print('i am heere 3');
+      
       } else if (widget.question == 1) {
         conceptionDate = selectedDate;
         calculateAgeInDays();
        
       } else if (widget.question == 2) {
         conceptionDate = selectedDate;
-        ageInDays = 25;
         calculateAgeInDays();
-        print('i am heeere 2');
-      } else {
-        ageInDays = 15;
-      }
+      
+      } 
     });
   }
 

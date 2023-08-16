@@ -54,7 +54,11 @@ class _SymptomPageState extends State<SymptomPage> {
       child: NavigationBarWidget(
           pageTitle: 'Symptoms',
           onBackButtonPressed: () => null,
-          onProfileButtonPressed: () => null),
+          onProfileButtonPressed: () => null,
+          returnButton: true,
+          profileButton: true,
+          
+          ),
     );
   }
 

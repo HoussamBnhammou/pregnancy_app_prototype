@@ -57,6 +57,8 @@ class Profile extends StatelessWidget {
             onBackButtonPressed: () => null,
             onProfileButtonPressed: () => null,
             pageTitle: 'Profile',
+            returnButton: true,
+            profileButton: false,
           )),
       body: Column(
         children: [

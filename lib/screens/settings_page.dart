@@ -37,6 +37,8 @@ class SettingsPage extends StatelessWidget {
             pageTitle: 'Settings',
             onBackButtonPressed: () => null,
             onProfileButtonPressed: () => null,
+            returnButton: true,
+            profileButton: false,
           )),
       body: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
         Expanded(child: Container()),

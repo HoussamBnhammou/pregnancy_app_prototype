@@ -3,7 +3,9 @@
 import 'package:flutter/material.dart';
 
 class SymptomTag extends StatelessWidget {
-  const SymptomTag({super.key});
+  final Function onPressed;
+  const SymptomTag({super.key,
+  required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

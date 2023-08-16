@@ -42,7 +42,10 @@ class _HomeState extends State<Home> {
         child: NavigationBarWidget(
             pageTitle: 'Home',
             onBackButtonPressed: () {},
-            onProfileButtonPressed: () {}),
+            onProfileButtonPressed: () {},
+            returnButton: false,
+            profileButton: true,
+            ),
       );
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   BabyWidget babyInformation() => BabyWidget(
